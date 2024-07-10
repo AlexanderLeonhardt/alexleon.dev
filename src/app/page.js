@@ -2,7 +2,7 @@ import styles from "./page.module.css";
 
 export default function HomePage() {
   return (
-    <main>
+    <main className='main'>
       <div className='card'>
         <h1>This is a title</h1>
         <p>Here is a paragraph with some text inside of it just to fill out the page.</p>
