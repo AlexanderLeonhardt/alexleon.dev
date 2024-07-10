@@ -6,8 +6,47 @@
   margin: 0;
   padding: 0;
 }
-
+html {
+  font-size: 16px;
+}
 body {
   background-color: black;
   color: white;
+}
+
+/* Headings */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+h2 {
+  font-size: 2rem;
+  margin: 1.5rem 0;
+}
+
+/* Common */
+p {
+  margin: 20px 0;
+  line-height: 28px;
+}
+ol, ul {
+  padding-left: 24px;
+}
+li, li > *{
+  margin: 8px 0;
+  line-height: 1em;
+}
+
+/* Code */
+pre:has(code) {
+  background-color: #1e1e1e;
+  max-width: 100%;
+  overflow-x: auto;
+  border-radius: 8px;
+  padding: 16px;
+}
+:not(pre) > code {
+  background-color: #303030;
+  border-radius: 4px;
+  padding: 4px;
 }
