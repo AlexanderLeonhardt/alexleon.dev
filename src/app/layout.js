@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <BackgroundParticles />
+        <BackgroundParticles lineSize={2} pointSize={4}/>
         {children}
       </body>
     </html>
