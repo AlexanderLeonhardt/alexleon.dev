@@ -1,5 +1,5 @@
 
-
+/* Globals */
 *, :after, :before {
   box-sizing: border-box;
   border: 0;
@@ -10,8 +10,8 @@ html {
   font-size: 16px;
 }
 body {
-  background-color: black;
-  color: white;
+  background-color: rgb(0, 0, 0);
+  color: rgb(237, 237, 237);
 }
 
 /* Headings */
@@ -19,22 +19,22 @@ h1 {
   font-size: 3rem;
   margin-bottom: 2rem;
 }
-h2 {
+h2, h3, h4, h5, h6 {
   font-size: 2rem;
   margin: 1.5rem 0;
 }
 
 /* Common */
 p {
-  margin: 20px 0;
-  line-height: 28px;
+  margin: 1.25rem 0;
+  line-height: 1.75rem;
 }
 ol, ul {
-  padding-left: 24px;
+  padding-left: 1.5rem;
 }
 li, li > *{
-  margin: 8px 0;
-  line-height: 1em;
+  margin: 0.5rem 0;
+  line-height: 1rem;
 }
 
 /* Code */
@@ -42,11 +42,11 @@ pre:has(code) {
   background-color: #1e1e1e;
   max-width: 100%;
   overflow-x: auto;
-  border-radius: 8px;
-  padding: 16px;
+  border-radius: 0.5rem;
+  padding: 1rem;
 }
 :not(pre) > code {
   background-color: #303030;
-  border-radius: 4px;
-  padding: 4px;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
 }
