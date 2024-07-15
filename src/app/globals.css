@@ -1,5 +1,17 @@
 :root {
   --main-width: 80rem;
+
+  --darktheme-bg: rgb(0, 0, 0);
+  --darktheme-bd: rgb(32, 32, 32);
+  --darktheme-c: rgb(237, 237, 237);
+
+  --code-bg: #1e1e1e;
+  --code-c: #d4d4d4;
+
+  --card-bg: linear-gradient(
+    rgba(0, 0, 0, 0.95) 0px,
+    rgba(0, 0, 0, 1)
+  );
 }
 
 /* Globals */
@@ -13,18 +25,24 @@ html {
   font-size: 16px;
 }
 body {
-  background-color: rgb(0, 0, 0);
-  color: rgb(237, 237, 237);
+  background: var(--darktheme-bg);
+  color: var(--darktheme-c);
 }
 
 /* Headings */
 h1 {
   font-size: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 h2, h3, h4, h5, h6 {
   font-size: 2rem;
   margin: 1.5rem 0;
+}
+h2:before {
+  content: '';
+  height: 1.25rem;
+  display: block;
+  border-top: 1px solid var(--darktheme-bd);
 }
 
 /* Common */
@@ -41,15 +59,17 @@ li, li > *{
 }
 
 /* Code */
+pre:has(code), :not(pre) > code {
+  color: var(--code-c);
+  background: var(--code-bg);
+}
 pre:has(code) {
-  background-color: #1e1e1e;
   max-width: 100%;
   overflow-x: auto;
   border-radius: 0.5rem;
   padding: 1rem;
 }
 :not(pre) > code {
-  background-color: #303030;
   border-radius: 0.25rem;
   padding: 0.25rem;
 }
@@ -62,12 +82,8 @@ pre:has(code) {
 }
 
 .card {
-  background: linear-gradient(
-    40deg, 
-    rgba(4, 4, 4, 0.95) 80%, 
-    rgba(20, 20, 20, 0.95)
-  );
-  border: 2px solid rgb(20, 20, 20);
-  border-radius: 10px;
-  padding: 12px;
+  background: var(--card-bg);
+  border: 2px solid var(--darktheme-bd);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
 }
