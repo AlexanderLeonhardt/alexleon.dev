@@ -57,6 +57,11 @@ li, li > *{
   margin: 0.5rem 0;
   line-height: 1rem;
 }
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(0, 86, 184);
+}
 
 /* Code */
 pre:has(code), :not(pre) > code {
