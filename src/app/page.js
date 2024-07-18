@@ -30,7 +30,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div>
+        <div className={`${styles.profileContainer}`}>
           <Image 
             src="/profilepic.png" 
             alt="Hand drawn picture of me" 
