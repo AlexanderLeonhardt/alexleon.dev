@@ -44,7 +44,7 @@ export default function HomePage() {
       </section>
       <section className={`card ${styles.techstack}`}>
         <div>
-          <h2>Knowledge & Tools</h2>
+          <h2>Technologies</h2>
         </div>
         <div className={`${styles.toolList}`}>
           <div className={`${styles.tool}`}>
