@@ -1,5 +1,5 @@
 .main {
-  --right-width: 52%;
+  --right-width: 60%;
 }
 .main h1, .main h2 {
   margin: 0;
@@ -13,6 +13,7 @@
   margin: 0;
 }
 .main section {
+  margin: 32px 16px;
   padding-left: 32px;
   padding-right: 32px;
 }
