@@ -11,7 +11,7 @@ export default function HomePage() {
     <main className={`main ${styles.main}`}>
       <section className={`card ${styles.intro}`}>
         <div className={`${styles.textContainer}`}>
-          <h1>I&apos;m Alex, a self taught <span>web developer</span> who loves to learn.</h1>
+          <h1>I&apos;m Alex, a self taught <span>web developer</span> who loves making stuff</h1>
           <div className={`${styles.socials}`}>
             <div className={`${styles.icon}`}>
               <a target="_blank" href="https://www.linkedin.com/in/alexander-leonhardt-7a8526286">
