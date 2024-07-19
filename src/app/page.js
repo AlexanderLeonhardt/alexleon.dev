@@ -35,8 +35,8 @@ export default function HomePage() {
             src="/profilepic.png" 
             alt="Hand drawn picture of me" 
             title="Art commissioned by 5amDraws" 
-            width={320} 
-            height={320} 
+            width={280} 
+            height={280} 
             priority={true} 
             className={styles.profilepic}
           />
