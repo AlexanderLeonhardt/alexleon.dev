@@ -10,7 +10,7 @@ export default function HomePage() {
     </div>
     <main className={`main ${styles.main}`}>
       <section className={`card ${styles.intro}`}>
-        <div>
+        <div className={`${styles.textContainer}`}>
           <h1>I&apos;m Alex, a self taught <span>web developer</span> who loves to learn.</h1>
           <div className={`${styles.socials}`}>
             <div className={`${styles.icon}`}>
@@ -43,7 +43,7 @@ export default function HomePage() {
         </div>
       </section>
       <section className={`card ${styles.techstack}`}>
-        <div>
+        <div className={`${styles.textContainer}`}>
           <h2>Technologies</h2>
         </div>
         <div className={`${styles.toolList}`}>
