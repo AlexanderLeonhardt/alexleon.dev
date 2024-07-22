@@ -85,8 +85,50 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section className={`${styles.projects}`}>
-
+      <section className={`card ${styles.projects}`}>
+        <h2>Projects</h2>
+        <div className={`${styles.projectList}`}>
+          <div className={`${styles.projectCard}`}>
+            <h3>Project name</h3>
+            <p>Short description</p>
+            <div className={`${styles.imageph}`}>
+              <p>Image Here</p>
+            </div>
+            <a href='/'>View project</a>
+          </div>
+          <div className={`${styles.projectCard}`}>
+            <h3>Project name</h3>
+            <p>Short description</p>
+            <div className={`${styles.imageph}`}>
+              <p>Image Here</p>
+            </div>
+            <a href='/'>View project</a>
+          </div>
+          <div className={`${styles.projectCard}`}>
+            <h3>Project name</h3>
+            <p>Short description</p>
+            <div className={`${styles.imageph}`}>
+              <p>Image Here</p>
+            </div>
+            <a href='/'>View project</a>
+          </div>
+          <div className={`${styles.projectCard}`}>
+            <h3>Project name</h3>
+            <p>Short description</p>
+            <div className={`${styles.imageph}`}>
+              <p>Image Here</p>
+            </div>
+            <a href='/'>View project</a>
+          </div>
+          <div className={`${styles.projectCard}`}>
+            <h3>Project name</h3>
+            <p>Short description</p>
+            <div className={`${styles.imageph}`}>
+              <p>Image Here</p>
+            </div>
+            <a href='/'>View project</a>
+          </div>
+        </div>
       </section>
       <section className={`${styles.blogposts}`}>
 
