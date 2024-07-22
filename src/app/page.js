@@ -88,46 +88,77 @@ export default function HomePage() {
       <section className={`card ${styles.projects}`}>
         <h2>Projects</h2>
         <div className={`${styles.projectList}`}>
+
           <div className={`${styles.projectCard}`}>
-            <h3>Project name</h3>
-            <p>Short description</p>
-            <div className={`${styles.imageph}`}>
-              <p>Image Here</p>
+            <div className={`${styles.projectDesc}`}>
+              <div>
+                <h3>Project name</h3>
+                <p>Some text here that will describe what this specific project is about and why I decided to create it.</p>
+              </div>
+              <div className={`${styles.projectLinks}`}>
+                <a className={`button`} href='/'>Repository</a>
+                <a className={`button`} href='/'>Live Demo</a>
+              </div>
             </div>
-            <a href='/'>View project</a>
+            <div className={`${styles.projectImage}`}></div>
           </div>
+
           <div className={`${styles.projectCard}`}>
-            <h3>Project name</h3>
-            <p>Short description</p>
-            <div className={`${styles.imageph}`}>
-              <p>Image Here</p>
+            <div className={`${styles.projectDesc}`}>
+              <div>
+                <h3>Project name</h3>
+                <p>Some text here that will describe what this specific project is about and why I decided to create it.</p>
+              </div>
+              <div className={`${styles.projectLinks}`}>
+                <a className={`button`} href='/'>Repository</a>
+                <a className={`button`} href='/'>Live Demo</a>
+              </div>
             </div>
-            <a href='/'>View project</a>
+            <div className={`${styles.projectImage}`}></div>
           </div>
+
           <div className={`${styles.projectCard}`}>
-            <h3>Project name</h3>
-            <p>Short description</p>
-            <div className={`${styles.imageph}`}>
-              <p>Image Here</p>
+            <div className={`${styles.projectDesc}`}>
+              <div>
+                <h3>Project name</h3>
+                <p>Some text here that will describe what this specific project is about and why I decided to create it.</p>
+              </div>
+              <div className={`${styles.projectLinks}`}>
+                <a className={`button`} href='/'>Repository</a>
+                <a className={`button`} href='/'>Live Demo</a>
+              </div>
             </div>
-            <a href='/'>View project</a>
+            <div className={`${styles.projectImage}`}></div>
           </div>
+
           <div className={`${styles.projectCard}`}>
-            <h3>Project name</h3>
-            <p>Short description</p>
-            <div className={`${styles.imageph}`}>
-              <p>Image Here</p>
+            <div className={`${styles.projectDesc}`}>
+              <div>
+                <h3>Project name</h3>
+                <p>Some text here that will describe what this specific project is about and why I decided to create it.</p>
+              </div>
+              <div className={`${styles.projectLinks}`}>
+                <a className={`button`} href='/'>Repository</a>
+                <a className={`button`} href='/'>Live Demo</a>
+              </div>
             </div>
-            <a href='/'>View project</a>
+            <div className={`${styles.projectImage}`}></div>
           </div>
+
           <div className={`${styles.projectCard}`}>
-            <h3>Project name</h3>
-            <p>Short description</p>
-            <div className={`${styles.imageph}`}>
-              <p>Image Here</p>
+            <div className={`${styles.projectDesc}`}>
+              <div>
+                <h3>Project name</h3>
+                <p>Some text here that will describe what this specific project is about and why I decided to create it.</p>
+              </div>
+              <div className={`${styles.projectLinks}`}>
+                <a className={`button`} href='/'>Repository</a>
+                <a className={`button`} href='/'>Live Demo</a>
+              </div>
             </div>
-            <a href='/'>View project</a>
+            <div className={`${styles.projectImage}`}></div>
           </div>
+
         </div>
       </section>
       <section className={`${styles.blogposts}`}>

@@ -5,6 +5,8 @@
   --darktheme-bd: rgb(32, 32, 32);
   --darktheme-c: rgb(237, 237, 237);
 
+  --accent-c: rgb(0, 86, 184);
+
   --code-bg: #1e1e1e;
   --code-c: #d4d4d4;
 
@@ -61,7 +63,7 @@ li, li > *{
 a {
   text-decoration: none;
   font-weight: bold;
-  color: rgb(0, 86, 184);
+  color: var(--accent-c);
 }
 
 /* Code */
@@ -93,6 +95,20 @@ pre:has(code) {
   border: 2px solid var(--darktheme-bd);
   border-radius: 0.5rem;
   padding: 0.75rem;
+}
+
+.button {
+  background: var(--accent-c);
+  color: white;
+  border-radius: 8px;
+  padding: 8px;
+  font-weight: bold;
+  text-align: center;
+  transition-duration: 0.2s;
+  opacity: 0.5;
+}
+.button:hover {
+  opacity: 1;
 }
 
 .roadmap-banner {
