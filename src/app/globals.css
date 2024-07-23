@@ -94,7 +94,7 @@ pre:has(code) {
   backdrop-filter: blur(5px);
   border: 2px solid var(--darktheme-bd);
   border-radius: 0.5rem;
-  padding: 0.75rem;
+  padding: 1.5rem;
 }
 
 .button {
