@@ -64,6 +64,13 @@
   border-radius: 50%;
 }
 
+/* About Section */
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 /* Techstack Section */
 .techstack {
   display: flex;

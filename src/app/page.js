@@ -11,7 +11,7 @@ export default function HomePage() {
     <main className={`main ${styles.main}`}>
       <section className={`card ${styles.intro}`}>
         <div className={`${styles.textContainer}`}>
-          <h1>I&apos;m Alex, a self taught <span>web developer</span> who loves making stuff</h1>
+          <h1>I&apos;m Alex, a self taught <span>web developer</span></h1>
           <div className={`${styles.socials}`}>
             <div className={`${styles.icon}`}>
               <a target="_blank" href="https://www.linkedin.com/in/alexander-leonhardt-7a8526286" aria-label="Visit my LinkedIn profile">
@@ -41,6 +41,11 @@ export default function HomePage() {
             className={styles.profilepic}
           />
         </div>
+      </section>
+      <section className={`card ${styles.about}`}>
+        <h2>Who am I?</h2>
+        <p>Hey there, my name is Alexander Leonhardt. I&apos;m currently <strong>24</strong> and living in <strong>Florida</strong>.</p>
+        <p>I started my journey in the tech world <strong>10</strong> years ago, back in the beginning of highschool. The first program I created was a tic-tac-toe game where you could play against an unbeatable computer. I had so much fun making it that I decided to pursue programming as a career. After that I learned JavaScript through creating Discord bots and that lead me down the web-dev rabbit hole. I have a ton of fun making things in the digital world.</p>
       </section>
       <section className={`card ${styles.techstack}`}>
         <div className={`${styles.textContainer}`}>
