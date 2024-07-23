@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./page.module.css";
 import Image from "next/image";
+import YearsSince from "@/components/YearsSince/YearsSince";
 
 export default function HomePage() {
   return (
@@ -44,8 +45,8 @@ export default function HomePage() {
       </section>
       <section className={`card ${styles.about}`}>
         <h2>Who am I?</h2>
-        <p>Hey there, my name is Alexander Leonhardt. I&apos;m currently <strong>24</strong> and living in <strong>Florida</strong>.</p>
-        <p>I started my journey in the tech world <strong>10</strong> years ago, back in the beginning of highschool. The first program I created was a tic-tac-toe game where you could play against an unbeatable computer. I had so much fun making it that I decided to pursue programming as a career. After that I learned JavaScript through creating Discord bots and that lead me down the web-dev rabbit hole. I have a ton of fun making things in the digital world.</p>
+        <p>Hey there, my name is Alexander Leonhardt. I&apos;m currently <strong><YearsSince date='1999/11/30'/></strong> and living in <strong>Florida</strong>.</p>
+        <p>I started my journey in the tech world <strong><YearsSince date='2014/8/1'/></strong> years ago, back in the beginning of highschool. The first program I created was a tic-tac-toe game where you could play against an unbeatable computer. I had so much fun making it that I decided to pursue programming as a career. After that I learned JavaScript through creating Discord bots and that lead me down the web-dev rabbit hole. I have a ton of fun making things in the digital world.</p>
       </section>
       <section className={`card ${styles.techstack}`}>
         <div className={`${styles.textContainer}`}>
