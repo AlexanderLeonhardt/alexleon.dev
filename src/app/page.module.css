@@ -65,20 +65,18 @@
 }
 
 /* About Section */
-.about {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.about h2 {
+  padding-bottom: 1.5rem;
+}
+.about p {
+  margin-bottom: 16px;
 }
 
 /* Techstack Section */
-.techstack {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.techstack h2 {
+  padding-bottom: 1.5rem;
 }
 .toolList {
-  width: var(--right-width);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

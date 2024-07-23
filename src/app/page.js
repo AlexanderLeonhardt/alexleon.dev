@@ -49,9 +49,7 @@ export default function HomePage() {
         <p>I started my journey in the tech world <strong><YearsSince date='2014/8/1'/></strong> years ago, back in the beginning of highschool. The first program I created was a tic-tac-toe game where you could play against an unbeatable computer. I had a blast making it and decided to pursue programming as a career. After that I learned JavaScript while creating Discord bots and that lead me down the web-dev rabbit hole. I have a ton of fun making things in the digital world.</p>
       </section>
       <section className={`card ${styles.techstack}`}>
-        <div className={`${styles.textContainer}`}>
-          <h2>Technologies</h2>
-        </div>
+        <h2>Technologies</h2>
         <div className={`${styles.toolList}`}>
           <div className={`${styles.tool}`}>
             <div className={`${styles.toolLogo}`}>
