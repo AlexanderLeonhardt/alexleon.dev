@@ -1,21 +1,16 @@
 .main {
-  --right-width: 60%;
+  --right-width: 50%;
 }
 .main h1, .main h2, .main h3 {
   margin: 0;
   font-size: 1.5rem;
   line-height: 2.25rem;
 }
-.main h2:before {
-  content: none;
-}
 .main p {
   margin: 0;
 }
 .main section {
   margin: 32px 16px;
-  padding-left: 32px;
-  padding-right: 32px;
 }
 .textContainer {
   width: calc(100% - var(--right-width));
@@ -53,14 +48,14 @@
   opacity: 1;
 }
 .profileContainer {
-  width: var(--right-width);
+  width: 50%;
   display: flex;
   justify-content: center;
 }
 .profilepic {
   max-width: 100%;
   height: auto;
-  background: linear-gradient(rgb(0, 108, 197), rgb(0, 0, 0));
+  background: linear-gradient(var(--accent-c), var(--darktheme-bg));
   border-radius: 50%;
 }
 

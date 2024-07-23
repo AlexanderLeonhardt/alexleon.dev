@@ -7,10 +7,10 @@ export default function HomePage() {
   return (
     <>
     <div className={`roadmap-banner`}>
-      <Link href={'/roadmap'}>Click here to view the roadmap</Link>
+      <Link href={'/roadmap'}>THIS SITE IS CURRENTLY A WORK IN PROGRESS - Click here to view the roadmap</Link>
     </div>
-    <main className={`main ${styles.main}`}>
-      <section className={`card ${styles.intro}`}>
+    <main className={`main card ${styles.main}`}>
+      <section className={`${styles.intro}`}>
         <div className={`${styles.textContainer}`}>
           <h1>I&apos;m Alex, a self taught <span>web developer</span></h1>
           <div className={`${styles.socials}`}>
@@ -43,12 +43,12 @@ export default function HomePage() {
           />
         </div>
       </section>
-      <section className={`card ${styles.about}`}>
+      <section className={`${styles.about}`}>
         <h2>Who am I?</h2>
         <p>Hey there, my name is Alexander Leonhardt. I&apos;m currently <strong><YearsSince date='1999/11/30'/></strong> and living in <strong>Florida</strong>.</p>
         <p>I started my journey in the tech world <strong><YearsSince date='2014/8/1'/></strong> years ago, back in the beginning of highschool. The first program I created was a tic-tac-toe game where you could play against an unbeatable computer. I had a blast making it and decided to pursue programming as a career. After that I learned JavaScript while creating Discord bots and that lead me down the web-dev rabbit hole. I have a ton of fun making things in the digital world.</p>
       </section>
-      <section className={`card ${styles.techstack}`}>
+      <section className={`${styles.techstack}`}>
         <h2>Technologies</h2>
         <div className={`${styles.toolList}`}>
           <div className={`${styles.tool}`}>
@@ -89,51 +89,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section className={`card ${styles.projects}`}>
+      <section className={`${styles.projects}`}>
         <h2>Projects</h2>
         <div className={`${styles.projectList}`}>
-
-          <div className={`${styles.projectCard}`}>
-            <div className={`${styles.projectDesc}`}>
-              <div>
-                <h3>Project name</h3>
-                <p>Some text here that will describe what this specific project is about and why I decided to create it.</p>
-              </div>
-              <div className={`${styles.projectLinks}`}>
-                <a className={`button`} href='/'>Repository</a>
-                <a className={`button`} href='/'>Live Demo</a>
-              </div>
-            </div>
-            <div className={`${styles.projectImage}`}></div>
-          </div>
-
-          <div className={`${styles.projectCard}`}>
-            <div className={`${styles.projectDesc}`}>
-              <div>
-                <h3>Project name</h3>
-                <p>Some text here that will describe what this specific project is about and why I decided to create it.</p>
-              </div>
-              <div className={`${styles.projectLinks}`}>
-                <a className={`button`} href='/'>Repository</a>
-                <a className={`button`} href='/'>Live Demo</a>
-              </div>
-            </div>
-            <div className={`${styles.projectImage}`}></div>
-          </div>
-
-          <div className={`${styles.projectCard}`}>
-            <div className={`${styles.projectDesc}`}>
-              <div>
-                <h3>Project name</h3>
-                <p>Some text here that will describe what this specific project is about and why I decided to create it.</p>
-              </div>
-              <div className={`${styles.projectLinks}`}>
-                <a className={`button`} href='/'>Repository</a>
-                <a className={`button`} href='/'>Live Demo</a>
-              </div>
-            </div>
-            <div className={`${styles.projectImage}`}></div>
-          </div>
 
           <div className={`${styles.projectCard}`}>
             <div className={`${styles.projectDesc}`}>
