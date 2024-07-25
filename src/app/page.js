@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import Image from "next/image";
 import YearsSince from "@/components/YearsSince/YearsSince";
+import ContactForm from "@/components/ContactForm/ContactForm";
 
 export default function HomePage() {
   return (
@@ -149,7 +150,8 @@ export default function HomePage() {
         </div>
       </section>
       <section className={`${styles.contact}`}>
-
+        <h2>Get in touch!</h2>
+        <ContactForm />
       </section>
     </main>
     </>

@@ -108,6 +108,7 @@ pre:has(code) {
   opacity: 0.8;
 }
 .button:hover {
+  cursor: pointer;
   opacity: 1;
 }
 

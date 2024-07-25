@@ -1,0 +1,25 @@
+.contactForm {
+  background: rgb(3, 3, 3);
+  padding: 8px;
+  border-radius: 8px;
+}
+.contactInputs {
+  font-family: inherit;
+  font-size: inherit;
+  background: black;
+  color: var(--darktheme-c);
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  margin: 8px 0;
+}
+.contactForm textarea {
+  height: 140px;
+  resize: vertical;
+}
+.contactInputs:focus {
+  outline: 2px solid var(--darktheme-bd);
+}
+.contact button {
+  margin-top: 0.5rem;
+}

@@ -126,9 +126,6 @@
 }
 
 /* Blogposts Section */
-.blogposts {
-
-}
 .postList {
   display: flex;
   flex-wrap: wrap;
@@ -149,12 +146,9 @@
 .post p {
   margin-bottom: 1.75rem;
 }
-
-/* Contact Section */
-.contact {
-
+.contact h2 {
+  padding-bottom: 1.5rem;
 }
-
 @media (max-width: 860px) {
   .main {
     --right-width: 100%;
