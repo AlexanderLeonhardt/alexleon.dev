@@ -124,7 +124,29 @@ export default function HomePage() {
         </div>
       </section>
       <section className={`${styles.blogposts}`}>
-
+        <h2>Recent Posts</h2>
+        <div className={`${styles.postList}`}>
+          <article className={`${styles.post}`}>
+            <h1>Blog Post Title</h1>
+            <p>Here is some preview text from this post so the user can get an idea of what this post contains. The text here will be the description of the blog post that I can manually set whenever creating these posts.</p>
+            <a className={`button`} href='/'>Read More</a>
+          </article>
+          <article className={`${styles.post}`}>
+            <h1>Blog Post Title</h1>
+            <p>Here is some preview text from this post so the user can get an idea of what this post contains. The text here will be the description of the blog post that I can manually set whenever creating these posts.</p>
+            <a className={`button`} href='/'>Read More</a>
+          </article>
+          <article className={`${styles.post}`}>
+            <h1>Blog Post Title</h1>
+            <p>Here is some preview text from this post so the user can get an idea of what this post contains. The text here will be the description of the blog post that I can manually set whenever creating these posts.</p>
+            <a className={`button`} href='/'>Read More</a>
+          </article>
+          <article className={`${styles.post}`}>
+            <h1>Blog Post Title</h1>
+            <p>Here is some preview text from this post so the user can get an idea of what this post contains. The text here will be the description of the blog post that I can manually set whenever creating these posts.</p>
+            <a className={`button`} href='/'>Read More</a>
+          </article>
+        </div>
       </section>
       <section className={`${styles.contact}`}>
 

@@ -129,6 +129,26 @@
 .blogposts {
 
 }
+.postList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.post {
+  width: calc(100% / 3 - 6px);
+  background: rgb(3, 3, 3);
+  padding: 8px;
+  border-radius: 8px;
+}
+.post:first-child {
+  width: 100% !important;
+}
+.post h1 {
+  margin-bottom: 1rem;
+}
+.post p {
+  margin-bottom: 1.75rem;
+}
 
 /* Contact Section */
 .contact {
@@ -163,5 +183,8 @@
   }
   .projectImage {
     max-width: 100%;
+  }
+  .post {
+    width: 100%;
   }
 }
