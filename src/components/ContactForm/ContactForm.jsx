@@ -1,6 +1,6 @@
 'use client'
 import styles from './contactform.module.css';
-import { submitForm } from '@/actions/contactSubmit';
+import { submitForm } from '@/serveractions/contactSubmit';
 
 export default function ContactForm() {
   return (
