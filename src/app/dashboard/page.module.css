@@ -1,0 +1,10 @@
+.user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profilepic {
+  background: var(--darktheme-bd);
+  border-radius: 50%;
+}
