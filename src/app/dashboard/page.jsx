@@ -1,6 +1,6 @@
 import styles from './page.module.css';
 import { auth } from '@/auth';
-import { SignInButton } from '@/components/SignInButton/SignInButton';
+import { SignInButton, SignOutButton } from '@/components/AuthButtons/AuthButtons';
 
 async function DashboardPage() {
   const session = await auth();
@@ -12,6 +12,7 @@ async function DashboardPage() {
     return (
       <main>
         <h1>Dashboard</h1>
+        <SignOutButton />
       </main>
     );
   }
