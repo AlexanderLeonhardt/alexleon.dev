@@ -33,6 +33,12 @@ const Tiptap = () => {
           >
             Strike
           </button>
+          <button
+            onClick={() => editor.chain().focus().toggleCode().run()}
+            className={editor.isActive('code') ? 'is-active' : ''}
+          >
+            Code
+          </button>
         </div>
       </BubbleMenu>}
       {editor && <FloatingMenu editor={editor} tippyOptions={{ duration: 100 }}>
