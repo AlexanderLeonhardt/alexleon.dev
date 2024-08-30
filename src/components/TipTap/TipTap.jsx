@@ -61,6 +61,12 @@ const Tiptap = () => {
           >
             Ordered list
           </button>
+          <button
+            onClick={() => editor.chain().focus().toggleBlockquote().run()}
+            className={editor.isActive('blockquote') ? 'is-active' : ''}
+          >
+            Toggle blockquote
+          </button>
         </div>
       </FloatingMenu>}
       <EditorContent editor={editor} />

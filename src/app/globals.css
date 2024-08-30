@@ -65,6 +65,19 @@ a {
   font-weight: bold;
   color: var(--accent-c);
 }
+blockquote {
+  background-color: #0a0a0a;
+  border-radius: 10px;
+  color: #acacac;
+  display: flex;
+  align-items: center;
+  font-style: italic;
+}
+blockquote:before, blockquote:after {
+  content: '"';
+  font-size: 2rem;
+  padding: 4px;
+}
 
 /* Code */
 pre:has(code), :not(pre) > code {
