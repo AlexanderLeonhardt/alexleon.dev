@@ -2,6 +2,7 @@ import styles from './page.module.css';
 import Image from "next/image";
 import { auth } from '@/auth';
 import { SignInButton, SignOutButton } from '@/components/AuthButtons/AuthButtons';
+import TipTap from '@/components/TipTap/TipTap';
 
 async function DashboardPage() {
   const session = await auth();
@@ -25,6 +26,9 @@ async function DashboardPage() {
             className={styles.profilepic}
           />
           <SignOutButton />
+        </div>
+        <div>
+          <TipTap />
         </div>
       </main>
     );
