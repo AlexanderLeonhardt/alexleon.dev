@@ -38,12 +38,6 @@ const Tiptap = () => {
       {editor && <FloatingMenu editor={editor} tippyOptions={{ duration: 100 }}>
         <div className="floating-menu">
           <button
-            onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
-            className={editor.isActive('heading', { level: 1 }) ? 'is-active' : ''}
-          >
-            H1
-          </button>
-          <button
             onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
             className={editor.isActive('heading', { level: 2 }) ? 'is-active' : ''}
           >
@@ -54,6 +48,12 @@ const Tiptap = () => {
             className={editor.isActive('bulletList') ? 'is-active' : ''}
           >
             Bullet list
+          </button>
+          <button
+            onClick={() => editor.chain().focus().toggleOrderedList().run()}
+            className={editor.isActive('orderedList') ? 'is-active' : ''}
+          >
+            Ordered list
           </button>
         </div>
       </FloatingMenu>}
