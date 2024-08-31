@@ -10,6 +10,11 @@ const nextConfig = {
       },
     ],
   },
+  experimental: {
+    optimizePackageImports: [
+      'shiki',
+    ],
+  },
 };
 
 export default nextConfig;

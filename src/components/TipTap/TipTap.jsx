@@ -2,14 +2,18 @@
 
 import { FloatingMenu, BubbleMenu, useEditor, EditorContent } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
+import CodeBlockShiki from 'tiptap-extension-code-block-shiki';
 
 const Tiptap = () => {
   const editor = useEditor({
     extensions: [
-      StarterKit
+      StarterKit.configure({ codeBlock: false }),
+      CodeBlockShiki.configure({
+        defaultTheme: 'dark-plus'
+      }),
     ],
     content: '<p>Hello World! 🌎️</p>',
-  })
+  });
 
   return (
     <>
