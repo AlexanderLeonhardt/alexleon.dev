@@ -1,0 +1,13 @@
+.menu {
+  display: flex;
+  gap: 2px;
+}
+
+.menu button {
+  cursor: pointer;
+}
+
+.isActive {
+  background: rgb(65, 65, 65);
+  color: white;
+}
