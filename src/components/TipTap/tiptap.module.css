@@ -11,3 +11,23 @@
   background: rgb(65, 65, 65);
   color: white;
 }
+
+.title,
+.desc {
+  font-family: inherit;
+  width: 100%;
+  display: block;
+  padding: 8px;
+  font-size: 1rem;
+  background: black;
+  color: white;
+  margin: 8px;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.desc {
+  resize: vertical;
+}

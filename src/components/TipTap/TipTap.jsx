@@ -5,7 +5,12 @@ import styles from './tiptap.module.css';
 import { FloatingMenu, BubbleMenu, useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import CodeBlockShiki from 'tiptap-extension-code-block-shiki';
+import { useState } from 'react';
 const Tiptap = () => {
+
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+
   const editor = useEditor({
     immediatelyRender: false,
     extensions: [
@@ -25,8 +30,8 @@ const Tiptap = () => {
       if (editorElement) {
         const content = editorElement.innerHTML;
         blogPostSubmit({
-          title: "Test Title",
-          description: "Test description",
+          title: title,
+          description: description,
           content: content,
         });
       }
@@ -35,6 +40,19 @@ const Tiptap = () => {
 
   return (
     <>
+      <input
+        onChange={(event) => setTitle(event.target.value)}
+        className={styles.title} 
+        type="text" 
+        placeholder='Enter Title' 
+        name='title'
+      />
+      <textarea
+        onChange={(event) => setDescription(event.target.value)}
+        className={styles.desc} 
+        placeholder='Description'
+        name='description'
+      />
       <div>
         <div>
           {editor && <BubbleMenu editor={editor} tippyOptions={{ duration: 100 }}>
