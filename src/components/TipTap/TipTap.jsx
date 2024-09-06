@@ -1,5 +1,6 @@
 'use client'
 
+import blogPostSubmit from '@/serveractions/blogPostSubmit';
 import styles from './tiptap.module.css';
 import { FloatingMenu, BubbleMenu, useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
@@ -22,8 +23,12 @@ const Tiptap = () => {
     if (editor) {
       const editorElement = document.querySelector('.tiptap');
       if (editorElement) {
-        const html = editorElement.innerHTML;
-        console.log(html);
+        const content = editorElement.innerHTML;
+        blogPostSubmit({
+          title: "Test Title",
+          description: "Test description",
+          content: content,
+        });
       }
     }
   }
