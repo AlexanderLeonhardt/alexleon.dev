@@ -2,6 +2,7 @@
 
 import { BlogPost } from "@/lib/models";
 import { connectToDb } from "@/lib/utils";
+import { revalidatePath } from "next/cache";
 import slugify from "slugify";
 
 export default async function blogPostSubmit(postData) {
@@ -26,6 +27,7 @@ export default async function blogPostSubmit(postData) {
 
     await newBlogPost.save();
     console.log("Blog Post created!");
+    revalidatePath("/blog");
   } catch (error) {
     console.log(error);
     return { error: "Failed to submit blog post." };
