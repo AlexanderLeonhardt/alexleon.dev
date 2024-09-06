@@ -130,3 +130,8 @@ pre:has(code) {
   text-align: center;
   padding: 0.5rem 0;
 }
+
+.tiptap {
+  background: rgb(0, 0, 0);
+  padding: 8px;
+}
