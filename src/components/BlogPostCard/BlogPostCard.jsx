@@ -11,9 +11,11 @@ export default function BlogPostCard({ slug, title, date, description }) {
   console.log(dateString);
   return (
     <article className={`card ${styles.article}`}>
-      <h1 className={styles.title}>{title}</h1>
-      <p className={styles.date}>Posted on {dateString}</p>
-      <p className={styles.description}>{description}</p>
+      <div>
+        <h1 className={styles.title}>{title}</h1>
+        <p className={styles.date}>Posted on {dateString}</p>
+        <p className={styles.description}>{description}</p>
+      </div>
       <a href={`/blog/${slug}`} className={styles.link}>Read more</a>
     </article>
   );
