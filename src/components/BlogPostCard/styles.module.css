@@ -9,6 +9,10 @@
   margin: 0;
 }
 
+.content {
+  width: 100%;
+}
+
 .title {
   font-size: 2rem;
   margin: 0;
