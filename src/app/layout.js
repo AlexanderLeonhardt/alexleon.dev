@@ -6,7 +6,10 @@ import NavBar from "@/components/NavBar/NavBar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "alexleon.dev",
+  title: {
+    default: "alexleon.dev",
+    template: "%s | alexleon.dev"
+  },
   description: "My portfolio website. Check out my side projects, blog posts, and contact info.",
 };
 

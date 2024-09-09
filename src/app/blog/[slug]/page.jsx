@@ -1,6 +1,16 @@
 import { getBlogPost } from "@/lib/data";
 import { notFound } from "next/navigation";
 
+export async function generateMetadata({ params }) {
+  const { slug } = params;
+  const blogPost = await getBlogPost(slug);
+
+  return {
+    title: blogPost.title,
+    description: blogPost.description,
+  }
+}
+
 export default async function BlogPostPage({ params }) {
   const { slug } = params;
   const blogPost = await getBlogPost(slug);

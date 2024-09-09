@@ -4,6 +4,12 @@ import { auth } from '@/auth';
 import { SignInButton, SignOutButton } from '@/components/AuthButtons/AuthButtons';
 import TipTap from '@/components/TipTap/TipTap';
 
+
+export const metadata = {
+  title: "Dashboard",
+  description: "alexleon.dev admin dashboard",
+};
+
 async function DashboardPage() {
   const session = await auth();
   if (!session) {
