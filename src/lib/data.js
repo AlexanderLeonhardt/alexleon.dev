@@ -5,6 +5,13 @@ export const getBlogPosts = async () => {
   try {
     await connectToDb();
     const blogPosts = await BlogPost.find();
+
+    blogPosts.sort(function(postA, postB){
+      const postATime = postA.createdAt.getTime();
+      const postBTime = postB.createdAt.getTime();
+      return postBTime - postATime;
+    });
+
     return blogPosts;
   } catch (error) {
     console.log(error);
