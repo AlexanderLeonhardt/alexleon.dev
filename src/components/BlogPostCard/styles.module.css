@@ -1,0 +1,24 @@
+.article {
+  max-width: 400px;
+}
+
+.article p {
+  margin: 0;
+}
+
+.title {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.date {
+  color: grey;
+}
+
+.description {
+  
+}
+
+.link {
+
+}

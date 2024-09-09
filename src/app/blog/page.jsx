@@ -1,3 +1,4 @@
+import BlogPostCard from "@/components/BlogPostCard/BlogPostCard";
 import { getBlogPosts } from "@/lib/data";
 
 export default async function BlogPage() {
@@ -9,12 +10,13 @@ export default async function BlogPage() {
     <main className={`main card`}>
       <h1>Blog Page</h1>
       {blogPosts.map((blogPost) =>
-        <article key={blogPost.slug}>
-          <a href={`/blog/${blogPost.slug}`}>
-            <h1>{blogPost.title}</h1>
-            <p>{blogPost.description}</p>
-          </a>
-        </article>
+        <BlogPostCard 
+          key={blogPost.slug}
+          slug={blogPost.slug}
+          title={blogPost.title}
+          date={blogPost.createdAt}
+          description={blogPost.description}
+        />
       )}
     </main>
   );
