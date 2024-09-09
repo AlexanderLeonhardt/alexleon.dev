@@ -8,7 +8,6 @@ export default function BlogPostCard({ slug, title, date, description }) {
     year: 'numeric',
   }
   const dateString = date?.toLocaleDateString("en-US", options);
-  console.log(dateString);
   return (
     <article className={`card ${styles.article}`}>
       <div>
