@@ -1,7 +1,9 @@
 import { connectToDb } from "./utils";
 import { BlogPost } from "./models";
+import { unstable_noStore as noStore} from "next/cache";
 
 export const getBlogPosts = async () => {
+  noStore();
   try {
     await connectToDb();
     const blogPosts = await BlogPost.find();
@@ -20,6 +22,7 @@ export const getBlogPosts = async () => {
 }
 
 export const getBlogPost = async (slug) => {
+  noStore();
   try {
     await connectToDb();
     const blogPost = await BlogPost.findOne({slug});
