@@ -1,6 +1,6 @@
 'use client'
 
-import blogPostSubmit from '@/serveractions/blogPostSubmit';
+import { blogPostSubmit } from '@/serveractions/blogPostActions';
 import styles from './tiptap.module.css';
 import { FloatingMenu, BubbleMenu, useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';

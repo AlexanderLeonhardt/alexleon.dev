@@ -36,6 +36,7 @@ async function DashboardPage() {
         <div>
           <TipTap />
         </div>
+        
       </main>
     );
   }
