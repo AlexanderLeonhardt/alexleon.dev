@@ -2,9 +2,13 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import Image from "next/image";
 import YearsSince from "@/components/YearsSince/YearsSince";
+import { getBlogPosts } from "@/lib/data";
+import BlogPostCard from "@/components/BlogPostCard/BlogPostCard";
 import ContactForm from "@/components/ContactForm/ContactForm";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const blogPosts = await getBlogPosts();
+
   return (
     <>
     <div className={`roadmap-banner`}>
@@ -121,33 +125,24 @@ export default function HomePage() {
             </div>
             <div className={`${styles.projectImage}`}></div>
           </div>
-
         </div>
       </section>
       <section className={`${styles.blogposts}`}>
         <h2>Recent Posts</h2>
         <div className={`${styles.postList}`}>
-          <article className={`${styles.post}`}>
-            <h1>Blog Post Title</h1>
-            <p>Here is some preview text from this post so the user can get an idea of what this post contains. The text here will be the description of the blog post that I can manually set whenever creating these posts.</p>
-            <a className={`button`} href='/'>Read More</a>
-          </article>
-          <article className={`${styles.post}`}>
-            <h1>Blog Post Title</h1>
-            <p>Here is some preview text from this post so the user can get an idea of what this post contains. The text here will be the description of the blog post that I can manually set whenever creating these posts.</p>
-            <a className={`button`} href='/'>Read More</a>
-          </article>
-          <article className={`${styles.post}`}>
-            <h1>Blog Post Title</h1>
-            <p>Here is some preview text from this post so the user can get an idea of what this post contains. The text here will be the description of the blog post that I can manually set whenever creating these posts.</p>
-            <a className={`button`} href='/'>Read More</a>
-          </article>
-          <article className={`${styles.post}`}>
-            <h1>Blog Post Title</h1>
-            <p>Here is some preview text from this post so the user can get an idea of what this post contains. The text here will be the description of the blog post that I can manually set whenever creating these posts.</p>
-            <a className={`button`} href='/'>Read More</a>
-          </article>
+          {blogPosts.slice(0, 3).map((blogPost) =>
+            <div className={styles.post} key={blogPost.slug}>
+              <BlogPostCard
+                slug={blogPost.slug}
+                title={blogPost.title}
+                date={blogPost.createdAt}
+                description={blogPost.description}
+              />
+            </div>
+          )}
         </div>
+        <br/>
+        <a className={`button`} href='/blog'>View all posts</a>
       </section>
       <section className={`${styles.contact}`}>
         <h2>Get in touch!</h2>

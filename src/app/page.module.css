@@ -127,27 +127,23 @@
 
 /* Blogposts Section */
 .postList {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 8px;
 }
-.post {
-  width: calc(100% / 3 - 6px);
-  background: rgb(3, 3, 3);
-  padding: 8px;
-  border-radius: 8px;
-}
-.post:first-child {
-  width: 100% !important;
-}
-.post h1 {
-  margin-bottom: 1rem;
-}
-.post p {
-  margin-bottom: 1.75rem;
+.post article {
+  height: 100%;
 }
 .contact h2 {
   padding-bottom: 1.5rem;
+}
+@media (max-width: 1000px) {
+  .postList {
+    grid-template-columns: 1fr 1fr;
+  }
+  .post:first-child {
+    grid-column: 1 / span 2;
+  }
 }
 @media (max-width: 860px) {
   .main {
@@ -178,7 +174,10 @@
   .projectImage {
     max-width: 100%;
   }
-  .post {
-    width: 100%;
+  .postList {
+    grid-template-columns: 1fr;
+  }
+  .post:first-child {
+    grid-column: 1 / 1;
   }
 }
