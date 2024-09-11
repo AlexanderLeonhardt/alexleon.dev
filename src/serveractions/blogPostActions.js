@@ -50,12 +50,11 @@ export async function updateBlogPost({ slug, description, content }) {
   }
 }
 
-export async function deleteBlogPost({ slug }) {
+export async function deleteBlogPost(slug) {
   try {
     connectToDb();
-    const deletedBlogPost = await BlogPost.findOneAndDelete(slug);
+    await BlogPost.findOneAndDelete({ slug });
     revalidatePath("/blog");
-    return deletedBlogPost;
   } catch (error) {
     console.log(error);
     return { error: "Failed to delete blog post." };
