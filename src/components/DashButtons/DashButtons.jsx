@@ -7,8 +7,16 @@ export function DeleteBlogButton({ slug }) {
   return <button
     className={styles.delete}
     onClick={() => {
-      console.log(slug);
       return deleteBlogPost(slug);
     }}
   >Delete</button>
+}
+
+export function EditBlogButton({ slug }) {
+  return <button
+    className={styles.edit}
+    onClick={() => {
+      console.log("Editing " + slug);
+    }}
+  >Edit</button>
 }

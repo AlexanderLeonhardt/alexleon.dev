@@ -4,7 +4,7 @@ import { auth } from '@/auth';
 import { SignInButton, SignOutButton } from '@/components/AuthButtons/AuthButtons';
 import TipTap from '@/components/TipTap/TipTap';
 import { getBlogPosts } from '@/lib/data';
-import { DeleteBlogButton } from '@/components/DashButtons/DashButtons';
+import { DeleteBlogButton, EditBlogButton } from '@/components/DashButtons/DashButtons';
 
 export const metadata = {
   title: "Dashboard",
@@ -50,7 +50,7 @@ export default async function DashboardPage() {
               <p><a href={`/blog/${slug}`}>{blogPost.title}</a></p>
               <p>{dateString}</p>
               <div className={styles.buttons}>
-                <button>Edit</button>
+                <EditBlogButton slug={slug} />
                 <DeleteBlogButton slug={slug} />
               </div>
             </div>
