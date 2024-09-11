@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 export async function generateMetadata({ params }) {
   const { slug } = params;
   const blogPost = await getBlogPost(slug);
+  if (!blogPost) notFound();
 
   return {
     title: blogPost.title,

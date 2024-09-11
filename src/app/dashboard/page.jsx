@@ -47,7 +47,7 @@ export default async function DashboardPage() {
           const dateString = blogPost.createdAt.toLocaleDateString("en-US", options);
           return (
             <div className={styles.blogPost} key={slug}>
-              <p><a href={slug}>{blogPost.title}</a></p>
+              <p><a href={`/blog/${slug}`}>{blogPost.title}</a></p>
               <p>{dateString}</p>
               <div className={styles.buttons}>
                 <button>Edit</button>
