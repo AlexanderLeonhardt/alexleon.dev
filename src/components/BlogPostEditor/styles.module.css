@@ -1,0 +1,77 @@
+.create {
+  background: blue;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 8px;
+  transition-duration: 0.2s;
+  margin: 16px 0;
+}
+
+.create:hover {
+  scale: 1.1;
+}
+
+.create svg {
+  height: 28px;
+  width: 28px;
+}
+
+.create p {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.blogPost {
+  background: rgb(20, 20, 20);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 10px;
+}
+
+.blogPost p {
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.date {
+  color: inherit;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.buttons button {
+  background: rgb(0, 0, 0);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+
+.buttons button:hover {
+  scale: 1.2;
+}
+
+.buttons .delete {
+  background: red;
+}

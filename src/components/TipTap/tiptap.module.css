@@ -31,3 +31,34 @@
 .desc {
   resize: vertical;
 }
+
+.buttons {
+  display: flex;
+  gap: 16px;
+  padding-top: 16px;
+}
+
+.buttons button {
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  transition-duration: 0.2s;
+}
+
+.buttons button:hover {
+  cursor: pointer;
+  scale: 1.2;
+}
+
+.buttons svg {
+  width: 32px;
+  height: 32px;
+}
+
+.save {
+  background: blue;
+}
+
+.cancel {
+  background: red;
+}
