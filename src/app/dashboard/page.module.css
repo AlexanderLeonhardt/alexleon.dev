@@ -10,17 +10,26 @@
 }
 
 .blogPostList {
-
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .blogPost {
-  background: rgb(29, 29, 29);
+  background: rgb(8, 8, 8);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 8px 20px;
   border-radius: 8px;
-  margin: 8px 0;
+}
+
+.blogPost p {
+  margin: 0;
+}
+
+.date {
+  color: rgb(117, 117, 117);
 }
 
 .buttons {
