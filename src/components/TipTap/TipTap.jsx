@@ -1,15 +1,15 @@
 'use client'
 
-import { blogPostSubmit } from '@/serveractions/blogPostActions';
+import { useState, useEffect } from 'react';
 import styles from './tiptap.module.css';
 import { FloatingMenu, BubbleMenu, useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import CodeBlockShiki from 'tiptap-extension-code-block-shiki';
-import { useState } from 'react';
-const Tiptap = () => {
 
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
+const Tiptap = ({ postTitle='', postDescription='', postContent, onSave, onCancel }) => {
+
+  const [title, setTitle] = useState(postTitle);
+  const [description, setDescription] = useState(postDescription);
 
   const editor = useEditor({
     immediatelyRender: false,
@@ -19,28 +19,27 @@ const Tiptap = () => {
         defaultTheme: 'dark-plus'
       }),
     ],
-    content: `<h2>Heading</h2><p>Some text</p><pre><code class="language-js"><span style="color: rgb(106, 153, 85);">// here is some code</span>
-
-<span style="color: rgb(156, 220, 254);">console</span><span style="color: rgb(212, 212, 212);">.</span><span style="color: rgb(220, 220, 170);">log</span><span style="color: rgb(212, 212, 212);">(</span><span style="color: rgb(206, 145, 120);">'Hello World!'</span><span style="color: rgb(212, 212, 212);">);</span></code></pre>`,
+    content: postContent || '',
   });
 
-  const handleClick = () => {
+  // update editor content when 'postContent' changes
+  useEffect(() => {
+    if (editor && postContent !== document.querySelector('.tiptap')) {
+      editor.commands.setContent(postContent);
+    }
+  }, [editor, postContent]);
+
+  const handleSaveClick = () => {
     if (editor) {
-      const editorElement = document.querySelector('.tiptap');
-      if (editorElement) {
-        const content = editorElement.innerHTML;
-        blogPostSubmit({
-          title: title,
-          description: description,
-          content: content,
-        });
-      }
+      const content = document.querySelector('.tiptap').innerHTML;
+      onSave({ title, description, content});
     }
   }
 
   return (
     <>
       <input
+        value={title}
         onChange={(event) => setTitle(event.target.value)}
         className={styles.title} 
         type="text" 
@@ -48,6 +47,7 @@ const Tiptap = () => {
         name='title'
       />
       <textarea
+        value={description}
         onChange={(event) => setDescription(event.target.value)}
         className={styles.desc} 
         placeholder='Description'
@@ -114,7 +114,10 @@ const Tiptap = () => {
         </div>
         <EditorContent editor={editor} />
       </div>
-      <button onClick={handleClick}>Submit</button>
+      <div>
+        <button onClick={handleSaveClick}>Save</button>
+        <button onClick={onCancel}>Cancel</button>
+      </div>
     </>
   );
 }

@@ -2,9 +2,8 @@ import styles from './page.module.css';
 import Image from "next/image";
 import { auth } from '@/auth';
 import { SignInButton, SignOutButton } from '@/components/AuthButtons/AuthButtons';
-import TipTap from '@/components/TipTap/TipTap';
 import { getBlogPosts } from '@/lib/data';
-import { DeleteBlogButton, EditBlogButton } from '@/components/DashButtons/DashButtons';
+import BlogPostEditor from '@/components/BlogPostEditor/BlogPostEditor';
 
 export const metadata = {
   title: "Dashboard",
@@ -16,7 +15,15 @@ export default async function DashboardPage() {
   if (!session) return <SignInButton/>
   const user = session.user;
 
-  const blogPosts = await getBlogPosts();
+  const blogPosts = (await getBlogPosts()).map((blogPost) => {
+    return {
+      slug: blogPost.slug,
+      title: blogPost.title,
+      description: blogPost.description,
+      content: blogPost.content,
+      createdAt: blogPost.createdAt
+    }
+  });
 
   return (
     <main className={`main card`}>
@@ -33,7 +40,8 @@ export default async function DashboardPage() {
         />
         <SignOutButton />
       </div>
-      <div>
+      <BlogPostEditor blogPosts={blogPosts} />
+      {/* <div>
         <TipTap />
       </div>
       <div className={styles.blogPostList}>
@@ -58,7 +66,7 @@ export default async function DashboardPage() {
             </div>
           );
         })}
-      </div>
+      </div> */}
     </main>
   );
 }
