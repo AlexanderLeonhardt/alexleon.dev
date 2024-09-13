@@ -1,8 +1,9 @@
 'use client'
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import styles from './tiptap.module.css';
 import { FloatingMenu, BubbleMenu, useEditor, EditorContent } from '@tiptap/react';
+import Link from '@tiptap/extension-link';
 import StarterKit from '@tiptap/starter-kit';
 import CodeBlockShiki from 'tiptap-extension-code-block-shiki';
 
@@ -14,7 +15,14 @@ const Tiptap = ({ postTitle='', postDescription='', postContent, onSave, onCance
   const editor = useEditor({
     immediatelyRender: false,
     extensions: [
-      StarterKit.configure({ codeBlock: false }),
+      StarterKit.configure({ 
+        codeBlock: false 
+      }),
+      Link.configure({
+        openOnClick: false,
+        autolink: true,
+        defaultProtocol: 'https',
+      }),
       CodeBlockShiki.configure({
         defaultTheme: 'dark-plus'
       }),
@@ -35,6 +43,28 @@ const Tiptap = ({ postTitle='', postDescription='', postContent, onSave, onCance
       onSave({ title, description, content});
     }
   }
+
+  const setLink = useCallback(() => {
+    const previousUrl = editor.getAttributes('link').href
+    const url = window.prompt('URL', previousUrl)
+
+    // cancelled
+    if (url === null) {
+      return
+    }
+
+    // empty
+    if (url === '') {
+      editor.chain().focus().extendMarkRange('link').unsetLink()
+        .run()
+
+      return
+    }
+
+    // update link
+    editor.chain().focus().extendMarkRange('link').setLink({ href: url })
+      .run()
+  }, [editor]);
 
   return (
     <>
@@ -80,6 +110,9 @@ const Tiptap = ({ postTitle='', postDescription='', postContent, onSave, onCance
               className={editor.isActive('code') ? styles.isActive : ''}
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M23 12L15.9289 19.0711L14.5147 17.6569L20.1716 12L14.5147 6.34317L15.9289 4.92896L23 12ZM3.82843 12L9.48528 17.6569L8.07107 19.0711L1 12L8.07107 4.92896L9.48528 6.34317L3.82843 12Z"></path></svg>
+            </button>
+            <button onClick={setLink} className={editor.isActive('link') ? styles.isActive : ''}>
+              Set link
             </button>
           </div>
           </BubbleMenu>}
