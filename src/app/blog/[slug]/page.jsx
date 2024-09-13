@@ -1,3 +1,4 @@
+import styles from './styles.module.css';
 import { getBlogPost } from "@/lib/data";
 import { notFound } from "next/navigation";
 
@@ -28,7 +29,7 @@ export default async function BlogPostPage({ params }) {
   return (
     <main className={`main card`}>
       <h1>{blogPost.title}</h1>
-      <p>{dateString}</p>
+      <p className={styles.date}>{dateString}</p>
       <div dangerouslySetInnerHTML={content} />
     </main>
   );
