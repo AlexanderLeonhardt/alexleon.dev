@@ -1,4 +1,4 @@
-import { HTML5Icon, CSS3Icon, JavaScriptIcon, MongoDBIcon, ExpressIcon, ReactIcon, NodeJSIcon, NextJSIcon, TypeScriptIcon, TailwindIcon } from '@/components/Icons/Icons';
+import { HTML5Icon, CSS3Icon, JavaScriptIcon, MongoDBIcon, ExpressIcon, ReactIcon, NodeJSIcon, NextJSIcon, TypeScriptIcon, TailwindIcon, LinkedInIcon, GitHubIcon, LeetCodeIcon } from '@/components/Icons/Icons';
 
 const tech = {
   'html5': {
@@ -43,4 +43,22 @@ const tech = {
   },
 }
 
-export { tech }
+const socials = [
+  {
+    'link': 'https://www.linkedin.com/in/alexander-leonhardt-7a8526286',
+    'label': 'Visit my LinkedIn profile',
+    'icon': LinkedInIcon
+  },
+  {
+    'link': 'https://github.com/AlexanderLeonhardt',
+    'label': 'Visit my GitHub profile',
+    'icon': GitHubIcon
+  },
+  {
+    'link': 'https://leetcode.com/u/alexpleonhardt',
+    'label': 'Visit my LeetCode profile',
+    'icon': LeetCodeIcon
+  },
+]
+
+export { tech, socials }
