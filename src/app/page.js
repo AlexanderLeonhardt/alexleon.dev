@@ -5,7 +5,7 @@ import YearsSince from "@/components/YearsSince/YearsSince";
 import { getBlogPosts } from "@/lib/data";
 import BlogPostCard from "@/components/BlogPostCard/BlogPostCard";
 import ContactForm from "@/components/ContactForm/ContactForm";
-import { socials, tech } from "@/lib/const";
+import { projects, socials, tech } from "@/lib/const";
 
 export default async function HomePage() {
   const blogPosts = await getBlogPosts();
@@ -71,33 +71,30 @@ export default async function HomePage() {
         <h2>Projects</h2>
         <div className={`${styles.projectList}`}>
 
-          <div className={`${styles.projectCard}`}>
-            <div className={`${styles.projectDesc}`}>
-              <div>
-                <h3>Project name</h3>
-                <p>Some text here that will describe what this specific project is about and why I decided to create it.</p>
+          {projects.map(project => {
+            return (
+              <div key={project.name} className={`${styles.projectCard}`}>
+                <div className={`${styles.projectDesc}`}>
+                  <div>
+                    <h3>{project.name}</h3>
+                    <p>{project.desc}</p>
+                  </div>
+                  <div className={`${styles.projectLinks}`}>
+                    <a className={`button`} href={project.repositoryLink}>Repository</a>
+                    <a className={`button`} href={project.demoLink}>Live Demo</a>
+                  </div>
+                </div>
+                <div className={`${styles.projectImage}`}>
+                  <Image 
+                    alt={project.name}
+                    src={project.image}
+                    fill
+                  />
+                </div>
               </div>
-              <div className={`${styles.projectLinks}`}>
-                <a className={`button`} href='/'>Repository</a>
-                <a className={`button`} href='/'>Live Demo</a>
-              </div>
-            </div>
-            <div className={`${styles.projectImage}`}></div>
-          </div>
+            )
+          })}
 
-          <div className={`${styles.projectCard}`}>
-            <div className={`${styles.projectDesc}`}>
-              <div>
-                <h3>Project name</h3>
-                <p>Some text here that will describe what this specific project is about and why I decided to create it.</p>
-              </div>
-              <div className={`${styles.projectLinks}`}>
-                <a className={`button`} href='/'>Repository</a>
-                <a className={`button`} href='/'>Live Demo</a>
-              </div>
-            </div>
-            <div className={`${styles.projectImage}`}></div>
-          </div>
         </div>
       </section>
       <section className={`${styles.blogposts}`}>

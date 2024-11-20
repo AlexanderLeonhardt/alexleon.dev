@@ -61,4 +61,21 @@ const socials = [
   },
 ]
 
-export { tech, socials }
+const projects = [
+  {
+    'name': "ProjectChess",
+    'desc': "Some text here that will describe what this specific project is about and why I decided to create it.",
+    'image': "/projectthumbs/chess.png",
+    'repositoryLink': "https://github.com/AlexanderLeonhardt/project-chess",
+    'demoLink': "https://project-chess.onrender.com",
+  },
+  {
+    'name': "PawsitivelyPerfectGrooming",
+    'desc': "Some text here that will describe what this specific project is about and why I decided to create it.",
+    'image': "/projectthumbs/pasitivelyperfectgrooming.png",
+    'repositoryLink': "https://github.com/AlexanderLeonhardt/pawsitivelyperfect-project",
+    'demoLink': "https://pawsitivelyperfect-project.vercel.app",
+  },
+]
+
+export { tech, socials, projects }
