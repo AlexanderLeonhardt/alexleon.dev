@@ -79,6 +79,17 @@ export default async function HomePage() {
                     <h3>{project.name}</h3>
                     <p>{project.desc}</p>
                   </div>
+                  <div className={`${styles.projectStack}`}>
+                    {project.stack.map(tech => {
+                      const Logo = tech.icon;
+                      return <div key={tech.name} className={`${styles.tool}`}>
+                        <div className={`${styles.toolLogo}`}>
+                          <Logo />
+                        </div>
+                        <p>{tech.name}</p>
+                      </div>
+                    })}
+                  </div>
                   <div className={`${styles.projectLinks}`}>
                     <a className={`button`} href={project.repositoryLink}>Repository</a>
                     <a className={`button`} href={project.demoLink}>Live Demo</a>

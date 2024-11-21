@@ -107,16 +107,23 @@
   border-radius: 8px;
   padding: 8px;
   display: flex;
+  align-items: center;
 }
 .projectDesc {
+  width: 100%;
   padding: 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 16px;
 }
 .projectLinks {
   display: flex;
   gap: 16px;
+}
+.projectStack {
+  display: flex;
+  gap: 4px;
 }
 .projectImage {
   position: relative;
@@ -127,6 +134,7 @@
 }
 .projectImage img {
   object-fit: cover;
+  border-radius: 8px;
 }
 
 /* Blogposts Section */

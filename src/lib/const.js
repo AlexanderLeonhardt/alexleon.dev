@@ -64,17 +64,19 @@ const socials = [
 const projects = [
   {
     'name': "ProjectChess",
-    'desc': "Some text here that will describe what this specific project is about and why I decided to create it.",
+    'desc': "A full-stack chess application created for the purpose of learning express and socket.io",
     'image': "/projectthumbs/chess.png",
     'repositoryLink': "https://github.com/AlexanderLeonhardt/project-chess",
     'demoLink': "https://project-chess.onrender.com",
+    'stack': [tech.express, tech.react, tech.nodejs],
   },
   {
     'name': "PawsitivelyPerfectGrooming",
-    'desc': "Some text here that will describe what this specific project is about and why I decided to create it.",
+    'desc': "I used this project to learn tailwind and practice typescript",
     'image': "/projectthumbs/pasitivelyperfectgrooming.png",
     'repositoryLink': "https://github.com/AlexanderLeonhardt/pawsitivelyperfect-project",
     'demoLink': "https://pawsitivelyperfect-project.vercel.app",
+    'stack': [tech.nextjs, tech.typescript, tech.tailwind],
   },
 ]
 
