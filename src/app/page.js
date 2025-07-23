@@ -91,8 +91,8 @@ export default async function HomePage() {
                     })}
                   </div>
                   <div className={`${styles.projectLinks}`}>
-                    <a className={`button`} href={project.repositoryLink}>Repository</a>
-                    <a className={`button`} href={project.demoLink}>Live Demo</a>
+                    <a className={`button`} target="_blank" href={project.repositoryLink}>Repository</a>
+                    <a className={`button`} target="_blank" href={project.demoLink}>Live Demo</a>
                   </div>
                 </div>
                 <div className={`${styles.projectImage}`}>
